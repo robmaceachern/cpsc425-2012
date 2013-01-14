@@ -34,12 +34,37 @@ def boxfilter(n):
 
     return filter
 
+# Write a Python function, gauss1d(sigma), that returns a 1D Gaussian 
+# filter for a given value of sigma. The filter should be a 1D array with 
+# length 6 times sigma rounded up to the next odd integer. Each value of 
+# the filter can be computed from the Gaussian function, exp(- x^2 / (2*sigma^2)), 
+# where x is the distance of an array value from the center. This formula for 
+# the Gaussian ignores the constant factor. Therefore, you should normalize 
+# the values in the filter so that they sum to 1.
 
+# HINTS: For efficiency and compactness, it is best to avoid for loops in Python.
+# One way to do this is to first generate a 1D array of values for x, for example
+#  [-3 -2 -1 0 1 2 3] for a sigma of 1.0. These can then be used in a single
+# Numpy expression to calculate the Gaussian value corresponding to each element.
+
+# Show the filter values produced for sigma values of 0.3, 0.5, 1, and 2.
+def gauss1d(sigma):
+
+    # length should be 6 times sigma rounded up to the next odd integer
+    length = math.ceil(sigma * 6)
+
+    # increment if length is even
+    if length % 2 == 0:
+        length = length + 1;
+
+    return length;
 
 def runMe():
     print boxfilter(5)
     print boxfilter(3)
     print boxfilter(7)
+
+    print gauss1d(0.3)
     # print boxfilter(4)
 
 runMe()
