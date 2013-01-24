@@ -72,32 +72,6 @@ def gauss2d(sigma):
     convolved = signal.convolve2d(gauss, gaussTranspose)
     return convolved
 
-# Write a function gaussconvolve2d(image,sigma) that 
-# applies Gaussian convolution to a 2D image for the
-# given value of sigma. Do this by first generating 
-# a filter with your gauss2d, and then applying it 
-# to the image with signal.convolve2d(image,filter,'same').
-# The same option makes the result the same size as the 
-# image.
-
-# The Scipy Signal Processing toolbox also has a function
-# signal.correlate2d. Applying the filter gauss2d to 
-# the image with signal.correlate2d(image,filter,'same')
-# produces the same result as with 
-# signal.convolve2d(image,filter,'same'). Why does Scipy 
-# have separate functions signal.convolve2d and 
-# signal.correlate2d? HINT: Think of a situation in which
-# signal.convolve2d and signal.correlate2d (with 
-# identical arguments) produce different results.
-
-# Try downloading an image of your choice from the web
-# (right-click on an image in your browser and choose saveas).
-# Load this image into Python, convert it to a greyscale, 
-# Numpy array and run your gaussconvolve2d on it with 
-# a sigma of 3.
-
-# Show both the original and filtered images.
-
 def gaussconvolve2d(image_array, sigma):
 
     '''
@@ -121,45 +95,51 @@ def imageAsGrayscaleNumpyArray(image_str):
     return im_array
 
 def runMe():
+
+    '''
+    Invokes and displays the results of the required filters 
+    and processes an image.
+    '''
     
-    print 'boxfiler(3)'
+    print 'boxfilter(3)'
     print boxfilter(3)
-    print 'boxfilter(4)'
-    print boxfilter(4)
+    print ''
+    #print 'boxfilter(4)'
+    #print boxfilter(4)
     print 'boxfilter(5)'
     print boxfilter(5)
+    print ''
 
     print 'gauss1d(0.3)'
     print gauss1d(0.3)
+    print ''
     print 'gauss1d(0.5)'
     print gauss1d(0.5)
+    print ''
     print 'gauss1d(1)'
     print gauss1d(1)
+    print ''
     print 'gauss1d(2)'
     print gauss1d(2)
+    print ''
 
     print 'gauss2d(0.5)'
     print gauss2d(0.5)
-    print np.sum(gauss2d(0.5))
+    print ''
     print 'gauss2d(1)'
     print gauss2d(1)
 
-    fileName = 'waves'
-
+    # load an image, convert to grayscale, and save it
+    fileName = 'wave'
     orig_arr = imageAsGrayscaleNumpyArray(fileName + '.jpg')
     orig_arr = orig_arr.astype('uint8')
     orig_im = Image.fromarray(orig_arr)
     orig_im.save('img/' + fileName + '-gray.png', 'PNG')
 
-    for i in range(1, 10):
-        im_arr = gaussconvolve2d(orig_arr, i/10.0)
-        im = Image.fromarray(im_arr.astype('uint8'))
-        im.save('img/' + fileName + '-blur' + str(i) + '.png', 'PNG')
+    # convolve the original and save it
+    im_arr = gaussconvolve2d(orig_arr, 3)
+    im = Image.fromarray(im_arr.astype('uint8'))
+    im.save('img/' + fileName + '-blur' + '.png', 'PNG')
 
-        orig_copy = orig_arr.copy()
-        orig_copy *= 2
-        im_arr = orig_arr - im_arr
-        im = Image.fromarray(im_arr.astype('uint8'))
-        im.save('img/' + fileName + '-sharp' + str(i) + '.png', 'PNG')
-
+# run the script
 runMe()
