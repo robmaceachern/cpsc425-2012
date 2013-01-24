@@ -7,25 +7,12 @@ from scipy import signal
 import warnings
 warnings.simplefilter("ignore", np.ComplexWarning)
 
-# returns a box filter of size n by n. You should check that n is odd, 
-# checking and signaling an error with an assert statement. 
-# The filter should be a Numpy array. For example, your function should work as follows:
-
-# >>> boxfilter(5)
-# array([[ 0.04,  0.04,  0.04,  0.04,  0.04],
-#        [ 0.04,  0.04,  0.04,  0.04,  0.04],
-#        [ 0.04,  0.04,  0.04,  0.04,  0.04],
-#        [ 0.04,  0.04,  0.04,  0.04,  0.04],
-#        [ 0.04,  0.04,  0.04,  0.04,  0.04]])
-
-# >>> boxfilter(4)
-# Traceback (most recent call last):
-#   ...
-# AssertionError: Dimension must be odd
-# HINT: The generation of the filter can be done as a simple one-line expression. Of course, checking that n is odd requires a bit more work.
-
-# Show the results of your boxfilter(n) function for the cases n=3, n=4, and n=5.
 def boxfilter(n):
+
+    ''' 
+    Returns a box filter of size n by n (a numpy array)
+    Throws an error if n is even.
+     '''
 
     # ensure that n is always odd
     assert n % 2 == 1, "AssertionError: boxfilter dimension must be odd"
@@ -38,21 +25,16 @@ def boxfilter(n):
 
     return filter
 
-# Write a Python function, gauss1d(sigma), that returns a 1D Gaussian 
-# filter for a given value of sigma. The filter should be a 1D array with 
-# length 6 times sigma rounded up to the next odd integer. Each value of 
-# the filter can be computed from the Gaussian function, exp(- x^2 / (2*sigma^2)), 
-# where x is the distance of an array value from the center. This formula for 
-# the Gaussian ignores the constant factor. Therefore, you should normalize 
-# the values in the filter so that they sum to 1.
 
-# HINTS: For efficiency and compactness, it is best to avoid for loops in Python.
-# One way to do this is to first generate a 1D array of values for x, for example
-#  [-3 -2 -1 0 1 2 3] for a sigma of 1.0. These can then be used in a single
-# Numpy expression to calculate the Gaussian value corresponding to each element.
-
-# Show the filter values produced for sigma values of 0.3, 0.5, 1, and 2.
 def gauss1d(sigma):
+
+    '''
+    Returns a 1D Gaussian filter with length ceil(sigma * 6), 
+    rounded up to the next odd integer.
+
+    Each value of the filter is computed with the Gaussian function, exp(- x^2 / (2*sigma^2)),
+    and the values of the filter sum to 1.
+    '''
 
     assert sigma > 0, 'gauss1d: sigma cannot be less than or equal to zero'
 
@@ -78,18 +60,11 @@ def gauss1d(sigma):
     
     return gaussFilter
 
-# Create a Python function gauss2d(sigma) that returns a 
-# 2D Gaussian filter for a given value of sigma. Remember 
-# that a 2D Gaussian can be formed by convolution of a 1D
-# Gaussian with its transpose. You can use the function 
-# convolve2d in the Scipy Signal Processing toolbox to do
-# the convolution. You will need to provide signal.convolve2d
-# with a 2D array. To convert a 1D array, f, to a 2D array f, 
-# of the same size you use f = f[np.newaxis]
-
-# Show the 2D Gaussian filter for sigma values of 0.5 and 1.
-
 def gauss2d(sigma):
+
+    '''
+    Returns a 2D Gaussian filter for a given sigma.
+    '''
 
     gauss = gauss1d(sigma)[np.newaxis]
     gaussTranspose = gauss1d(sigma)[np.newaxis].transpose()
@@ -125,10 +100,20 @@ def gauss2d(sigma):
 
 def gaussconvolve2d(image_array, sigma):
 
+    '''
+    Applies 2D Gaussian convolution to the given image array.
+    '''
+
     filtered_array = signal.convolve2d(image_array, gauss2d(sigma), 'same')
     return filtered_array
 
 def imageAsGrayscaleNumpyArray(image_str):
+
+    '''
+    Opens the image at the given location, converts it to 
+    a grayscale image, and returns the numpy array.
+    '''
+
     im = Image.open(image_str)
     im = im.convert('L')
 
@@ -136,9 +121,13 @@ def imageAsGrayscaleNumpyArray(image_str):
     return im_array
 
 def runMe():
-    #print boxfilter(5)
-    #print boxfilter(3)
-    #print boxfilter(7)
+    
+    print 'boxfiler(3)'
+    print boxfilter(3)
+    print 'boxfilter(4)'
+    print boxfilter(4)
+    print 'boxfilter(5)'
+    print boxfilter(5)
 
     print 'gauss1d(0.3)'
     print gauss1d(0.3)
@@ -154,9 +143,8 @@ def runMe():
     print np.sum(gauss2d(0.5))
     print 'gauss2d(1)'
     print gauss2d(1)
-    print np.sum(gauss2d(1))
 
-    fileName = 'leaves'
+    fileName = 'waves'
 
     orig_arr = imageAsGrayscaleNumpyArray(fileName + '.jpg')
     orig_arr = orig_arr.astype('uint8')
