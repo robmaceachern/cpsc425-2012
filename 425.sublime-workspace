@@ -1,0 +1,1014 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"conv",
+				"convolution"
+			],
+			[
+				"ori",
+				"orig_arr"
+			],
+			[
+				"orig",
+				"orig_arr"
+			],
+			[
+				"image",
+				"imageAsGrayscaleNumpyArray"
+			],
+			[
+				"filt",
+				"filtered_array"
+			],
+			[
+				"sig",
+				"sigma"
+			],
+			[
+				"gau",
+				"gauss2d"
+			],
+			[
+				"con",
+				"convolve2d"
+			],
+			[
+				"gaus",
+				"gauss2d"
+			],
+			[
+				"gauss",
+				"gauss2d"
+			],
+			[
+				"box",
+				"boxfilter"
+			],
+			[
+				"Box",
+				"boxfilter"
+			],
+			[
+				"co",
+				"coursesFound"
+			],
+			[
+				"cour",
+				"course"
+			],
+			[
+				"course",
+				"courseArr"
+			],
+			[
+				"sectio",
+				"sections"
+			],
+			[
+				"sec",
+				"sectionsArrArr"
+			],
+			[
+				"allS",
+				"allSections"
+			],
+			[
+				"sect",
+				"sections"
+			],
+			[
+				"cou",
+				"courseRow"
+			],
+			[
+				"cous",
+				"courses"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"cours",
+				"courseArr"
+			],
+			[
+				"subj",
+				"subject"
+			],
+			[
+				"main",
+				"mainTable"
+			],
+			[
+				"all",
+				"allCoursesArr"
+			],
+			[
+				"det",
+				"detailUrl"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"stat",
+				"statusCode"
+			],
+			[
+				"ba",
+				"baseUrl"
+			],
+			[
+				"allSu",
+				"allSubjects"
+			],
+			[
+				"allSubjec",
+				"allSubjectUrl"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"mo",
+				"mobile-1"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"maxL",
+				"maxLng"
+			],
+			[
+				"er",
+				"errorMessage"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"dis",
+				"displayNotificationMessage"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"chat-mes",
+				"chat-message-member-leave"
+			],
+			[
+				"chat-mess",
+				"chat-message-member-join"
+			],
+			[
+				"message",
+				"messagearea"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"messa",
+				"message-box-body"
+			],
+			[
+				"chat-message",
+				"chat-message-member-change"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"room",
+				"roomId"
+			],
+			[
+				"remo",
+				"removedRoomIds"
+			],
+			[
+				"removed",
+				"removedRoomIds"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"ano",
+				"anonymous"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"num",
+				"numRemoved"
+			],
+			[
+				"roo",
+				"roomPrefix"
+			],
+			[
+				"us",
+				"userId"
+			],
+			[
+				"getr",
+				"getRoomsForUserId"
+			],
+			[
+				"rem",
+				"remainingSocketClients"
+			],
+			[
+				"chat-mem",
+				"chat-member-list-area"
+			],
+			[
+				"mess",
+				"messageBoxBody"
+			],
+			[
+				"messageBox",
+				"messageBoxFrom"
+			],
+			[
+				"resp",
+				"response"
+			],
+			[
+				"error",
+				"errorMessage"
+			],
+			[
+				"inpu",
+				"inputContainer"
+			],
+			[
+				"tb",
+				"tabContent"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"chat",
+				"chatMessage"
+			],
+			[
+				"get",
+				"getChatlog"
+			],
+			[
+				"ev",
+				"event"
+			],
+			[
+				"back",
+				"backgroundColorForMessage"
+			],
+			[
+				"ava",
+				"avatarUrlForMessage"
+			],
+			[
+				"appen",
+				"appendTo"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"app",
+				"appendTo"
+			],
+			[
+				"tab",
+				"tabContent"
+			],
+			[
+				"mes",
+				"messagearea"
+			],
+			[
+				"clear",
+				"clearFix"
+			],
+			[
+				"me",
+				"messageBoxBody"
+			],
+			[
+				"add",
+				"addUserToRoom"
+			],
+			[
+				"you",
+				"youtube-preview"
+			],
+			[
+				"scrol",
+				"scrollTop"
+			],
+			[
+				"scro",
+				"scrollTop"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"chat-",
+				"chat-message-other"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"bl",
+				"inline-block"
+			],
+			[
+				"send",
+				"sendfile"
+			],
+			[
+				"parse",
+				"parseInt"
+			],
+			[
+				"getRo",
+				"getRoomsForUserId"
+			],
+			[
+				"response",
+				"responseCode"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"messag",
+				"message-to-sever-failure"
+			],
+			[
+				"pas",
+				"passport"
+			],
+			[
+				"sess",
+				"session"
+			],
+			[
+				"av",
+				"avatar"
+			],
+			[
+				"avatar",
+				"avatarUrl"
+			],
+			[
+				"userIn",
+				"userInfoTemplate"
+			],
+			[
+				"default",
+				"defaultavatar"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"join-room",
+				"join-room-failure"
+			],
+			[
+				"hand",
+				"handshake"
+			],
+			[
+				"specifi",
+				"specifying"
+			],
+			[
+				"db",
+				"dbClient"
+			],
+			[
+				"Room",
+				"RoomManager"
+			],
+			[
+				"d",
+				"dbUrl"
+			],
+			[
+				"query",
+				"queryKey"
+			],
+			[
+				"enco",
+				"encodedGeoHashNE"
+			],
+			[
+				"display",
+				"displayName"
+			],
+			[
+				"displa",
+				"displayName"
+			],
+			[
+				"se",
+				"sessionID"
+			],
+			[
+				"ses",
+				"sessionId"
+			],
+			[
+				"upd",
+				"updateUser"
+			],
+			[
+				"disp",
+				"displayName"
+			],
+			[
+				"fu",
+				"fullAuth"
+			],
+			[
+				"crea",
+				"createAuth"
+			],
+			[
+				"passwo",
+				"password"
+			],
+			[
+				"au",
+				"authPrefix"
+			],
+			[
+				"find",
+				"findUserById"
+			],
+			[
+				"pa",
+				"passwordHash"
+			],
+			[
+				"password",
+				"passwordHash"
+			],
+			[
+				"aut",
+				"authKey"
+			],
+			[
+				"a",
+				"authPrefix"
+			],
+			[
+				"pass",
+				"passwordHash"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/comments",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Unix",
+				"name": "Notes:"
+			}
+		},
+		{
+			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/index.html",
+			"settings":
+			{
+				"buffer_size": 1068,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/js/app/app.js",
+			"settings":
+			{
+				"buffer_size": 7057,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter3/blog/js/app/app1.js",
+			"settings":
+			{
+				"buffer_size": 2997,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"f",
+				"Format: Javascript"
+			],
+			[
+				"j",
+				"Format: Javascript"
+			],
+			[
+				"fo",
+				"Format: Javascript"
+			],
+			[
+				"fr",
+				"Format: Javascript"
+			],
+			[
+				"Form",
+				"Format: Javascript"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/robmaceachern/Documents/workspace/python/cpsc425-2012/a1/a1.py",
+		"/Users/robmaceachern/Documents/workspace/python/cpsc425-2012/a2/a2.py",
+		"/Users/robmaceachern/Documents/Dropbox/School work/cpsc314/assignments/description.txt",
+		"/Volumes/2 TB WD/hello!",
+		"/Users/robmaceachern/Documents/workspace/web/coursified/sections.json",
+		"/Users/robmaceachern/Documents/workspace/web/coursified/subjects.json",
+		"/Users/robmaceachern/Downloads/ConnectorExamples 2/src/util/ToySecurityManager.java",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/js/main.js",
+		"/Users/robmaceachern/Documents/workspace/web/4D/.env",
+		"/Users/robmaceachern/Documents/workspace/web/4D/docs/css/main.css",
+		"/Users/robmaceachern/Documents/workspace/web/4D/chatmockup",
+		"/Users/robmaceachern/Documents/workspace/web/4D/docs/index.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/html/index.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/html/app.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/html/login.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/html/register.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/html/setdisplayname.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/server/js/redisClientManager.js",
+		"/Users/robmaceachern/Documents/workspace/web/4D/empty.env",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/css/main.css",
+		"/Users/robmaceachern/Documents/workspace/web/4D/web.js",
+		"/Users/robmaceachern/Documents/workspace/web/4D/package.json",
+		"/Users/robmaceachern/Desktop/.env",
+		"/Users/robmaceachern/Documents/workspace/web/4D/server/js/userManager.js",
+		"/Users/robmaceachern/getrooms.diff",
+		"/Users/robmaceachern/Documents/workspace/tools/swagger-ui/swagger-ui.json",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/js/plugins.js",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/crazytest.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/server/web.js",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/index.html",
+		"/Users/robmaceachern/Desktop/client.js",
+		"/Users/robmaceachern/Desktop/meetbymaps.js",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/index2.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/client/css/file.html",
+		"/Users/robmaceachern/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/robmaceachern/Documents/workspace/web/4D/Procfile",
+		"/Users/robmaceachern/Documents/workspace/web/4D/.gitignore",
+		"/Users/robmaceachern/Documents/workspace/web/4D/node_modules/socket.io/package.json",
+		"/Users/robmaceachern/Desktop/persistent_store_data.sqlite",
+		"/Users/robmaceachern/Documents/workspace/web/410-chat/web.js",
+		"/Users/robmaceachern/Documents/workspace/web/410-chat/index.html",
+		"/Users/robmaceachern/Documents/workspace/web/4D/readme.md",
+		"/Users/robmaceachern/Documents/workspace/web/sustainable-sushi/css/main.css",
+		"/Users/robmaceachern/Documents/workspace/web/sustainable-sushi/img/fish/black-salmon-grid.png",
+		"/Users/robmaceachern/Downloads/xkbdbthid-0.1/bthid/en_US.qwerty.xkbd",
+		"/Users/robmaceachern/Documents/workspace/web/sustainable-sushi/index.html",
+		"/Users/robmaceachern/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/Users/robmaceachern/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/robmaceachern/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/robmaceachern/Documents/workspace/web/responsive-design/style.css",
+		"/Users/robmaceachern/Documents/workspace/web/responsive-design/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/robmaceachern/Documents/workspace/web/4D/client"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sum",
+			"assert",
+			"show(",
+			"§",
+			"cpsc 420",
+			"CPSC",
+			"allSubjects",
+			"request(",
+			"request",
+			"req",
+			"allcour",
+			"cheerio.map",
+			"2489CE",
+			"link",
+			"limit",
+			"bounds",
+			"isvalidro",
+			"post",
+			"/api/room",
+			"/api/roo",
+			"login-an",
+			"html",
+			"userinfo",
+			"tabs",
+			"panelTemplate",
+			"error",
+			"input=",
+			"message",
+			"data-",
+			"room-mem",
+			"room-m",
+			"avatar-popup-dialog",
+			"avatar-popup-dialog center",
+			"addtab",
+			"users",
+			"getuser",
+			"logout",
+			"anony",
+			"console.err",
+			"create",
+			"getrooms",
+			"spiderfier",
+			"infowindow",
+			"infowindow.",
+			"spider",
+			"marker",
+			"add",
+			"spider",
+			"overlapping",
+			"message-from",
+			"close",
+			"Chat",
+			"join-ro",
+			"join-rr",
+			".log",
+			".err",
+			".warn",
+			".log(",
+			".length > 0)",
+			"if (reply.le",
+			"if (*length",
+			"errorMess",
+			"api/user",
+			"users",
+			"loadroom",
+			"api/ro",
+			"api/room",
+			"/api/ro",
+			"addta",
+			" auth",
+			"auth",
+			"anon",
+			"auth",
+			"getroombyi",
+			"getroom",
+			"/api/",
+			"/api",
+			"submit",
+			"chat-room",
+			"chat-room-in",
+			"input",
+			"log",
+			"addtab",
+			"chatlo",
+			"join-ro",
+			"chat-room-sub",
+			"socket.on",
+			"#",
+			":#",
+			"avatar:",
+			"message-to-ro",
+			"addta",
+			"master",
+			"head",
+			"dbclient",
+			"multi",
+			"master",
+			"generateRoomId",
+			"nan",
+			"faceboo",
+			"li>",
+			"addTab(",
+			"tab",
+			"roomid",
+			"numus",
+			"addtab",
+			"getroom",
+			"smembers",
+			"multi.ex",
+			"foreach",
+			"multi.ex",
+			"multi",
+			"parse",
+			"member",
+			"updawg-leave-room",
+			"room-id",
+			"roomPref",
+			"findUserBySessionId",
+			"room:",
+			"/api/user",
+			"general",
+			"\"room:",
+			"RoomMan",
+			"messag",
+			"local-an",
+			"authty",
+			"auth",
+			"authtyp"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"&sect",
+			"@sect"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/comments",
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Notes:",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/index.html",
+					"settings":
+					{
+						"buffer_size": 1068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/js/app/app.js",
+					"settings":
+					{
+						"buffer_size": 7057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2633,
+								2639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3502.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter3/blog/js/app/app1.js",
+					"settings":
+					{
+						"buffer_size": 2997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2414,
+								2414
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1576.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.961419753086,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 261.0,
+	"status_bar_visible": true
+}
