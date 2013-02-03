@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"Find",
+				"FindTemplate"
+			],
+			[
+				"img",
+				"imgLoc"
+			],
+			[
+				"ad",
+				"adjusty"
+			],
+			[
+				"adj",
+				"adjustx"
+			],
+			[
+				"point",
+				"pointList"
+			],
+			[
+				"sca",
+				"scaleFactor"
+			],
+			[
+				"sc",
+				"scaleFactor"
+			],
+			[
+				"con",
+				"converted"
+			],
+			[
+				"co",
+				"convert"
+			],
+			[
+				"temp",
+				"templateWidth"
+			],
+			[
+				"Fi",
+				"FindTemplate"
+			],
+			[
+				"abov",
+				"aboveThreshold"
+			],
+			[
+				"ncc",
+				"nccResult"
+			],
+			[
+				"show",
+				"ShowPyramid"
+			],
+			[
+				"off",
+				"offsetY"
+			],
+			[
+				"p",
+				"pyramid"
+			],
+			[
 				"conv",
 				"convolution"
 			],
@@ -32,10 +96,6 @@
 				"gauss2d"
 			],
 			[
-				"con",
-				"convolve2d"
-			],
-			[
 				"gaus",
 				"gauss2d"
 			],
@@ -50,10 +110,6 @@
 			[
 				"Box",
 				"boxfilter"
-			],
-			[
-				"co",
-				"coursesFound"
 			],
 			[
 				"cour",
@@ -312,10 +368,6 @@
 				"appendTo"
 			],
 			[
-				"ad",
-				"addClass"
-			],
-			[
 				"app",
 				"appendTo"
 			],
@@ -462,96 +514,11 @@
 			[
 				"se",
 				"sessionID"
-			],
-			[
-				"ses",
-				"sessionId"
-			],
-			[
-				"upd",
-				"updateUser"
-			],
-			[
-				"disp",
-				"displayName"
-			],
-			[
-				"fu",
-				"fullAuth"
-			],
-			[
-				"crea",
-				"createAuth"
-			],
-			[
-				"passwo",
-				"password"
-			],
-			[
-				"au",
-				"authPrefix"
-			],
-			[
-				"find",
-				"findUserById"
-			],
-			[
-				"pa",
-				"passwordHash"
-			],
-			[
-				"password",
-				"passwordHash"
-			],
-			[
-				"aut",
-				"authKey"
-			],
-			[
-				"a",
-				"authPrefix"
-			],
-			[
-				"pass",
-				"passwordHash"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/comments",
-			"settings":
-			{
-				"buffer_size": 304,
-				"line_ending": "Unix",
-				"name": "Notes:"
-			}
-		},
-		{
-			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/index.html",
-			"settings":
-			{
-				"buffer_size": 1068,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/js/app/app.js",
-			"settings":
-			{
-				"buffer_size": 7057,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter3/blog/js/app/app1.js",
-			"settings":
-			{
-				"buffer_size": 2997,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -609,6 +576,13 @@
 	},
 	"file_history":
 	[
+		"/Users/robmaceachern/Documents/workspace/python/cpsc425-2012/a3/ncc.py",
+		"/Users/robmaceachern/Documents/workspace/python/cpsc425-2012/a3/a3.py",
+		"/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter3/blog/js/app/app1.js",
+		"/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/js/app/app.js",
+		"/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/index.html",
+		"/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/comments",
+		"/Users/robmaceachern/Documents/workspace/python/cpsc425-2012/a3/faces/judybats.jpg",
 		"/Users/robmaceachern/Documents/workspace/python/cpsc425-2012/a1/a1.py",
 		"/Users/robmaceachern/Documents/workspace/python/cpsc425-2012/a2/a2.py",
 		"/Users/robmaceachern/Documents/Dropbox/School work/cpsc314/assignments/description.txt",
@@ -678,6 +652,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pointLists",
+			"points",
+			"size",
 			"sum",
 			"assert",
 			"show(",
@@ -802,10 +779,7 @@
 			"\"room:",
 			"RoomMan",
 			"messag",
-			"local-an",
-			"authty",
-			"auth",
-			"authtyp"
+			"local-an"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -827,117 +801,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/comments",
-					"settings":
-					{
-						"buffer_size": 304,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								304,
-								304
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Notes:",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/index.html",
-					"settings":
-					{
-						"buffer_size": 1068,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter1/notes/js/app/app.js",
-					"settings":
-					{
-						"buffer_size": 7057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2633,
-								2639
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3502.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/robmaceachern/Documents/workspace/web/Ember.js-in-Action-Source/chapter3/blog/js/app/app1.js",
-					"settings":
-					{
-						"buffer_size": 2997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2414,
-								2414
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1576.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -984,6 +847,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
 	"replace":
 	{
 		"height": 64.0
