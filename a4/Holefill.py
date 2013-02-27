@@ -9,23 +9,29 @@ import pickle
 ##############################################################################
 
 def ComputeSSD(TODOPatch, TODOMask, textureIm, patchL):
+    '''
+    ComputeSSD
+
+    Computes the sum of squares difference between the patch and texture image  
+    for each valid location of the patch within the texture image.
+
+    TODOPatch - The image patch, of size [2 * patchL + 1, 2 * patchL + 1, 3]
+
+    TODOMask - Specifies the elements of which elements of TODOPatch are empty and
+                waiting to be filled in. A 1 represents an empty pixel.
+                The first two dimensions are the same as TODOPatch, and there is no 
+                third dimension.
+
+    textureIm - The texture image. Size is [texImRows, texImCols, 3]
+
+    patchL - The length used to define the patch size.
+    '''
     patch_rows, patch_cols, patch_bands = np.shape(TODOPatch)
     tex_rows, tex_cols, tex_bands = np.shape(textureIm)
     ssd_rows = tex_rows - 2 * patchL
     ssd_cols = tex_cols - 2 * patchL
     SSD = np.zeros((ssd_rows,ssd_cols))
-    # print "TODOMask:"
-    # print TODOMask.shape
-    # print "TODOPatch"
-    # print TODOPatch.shape
-    # print "textureIm:"
-    # print textureIm.shape
-    # print "patchL:"
-    # print patchL
-    # print "SSD:"
-    # print SSD.shape
-    # print ssd_rows
-    # print ssd_cols
+
     for r in range(ssd_rows):
         for c in range(ssd_cols):
             # Compute sum square difference between textureIm and TODOPatch
@@ -35,7 +41,6 @@ def ComputeSSD(TODOPatch, TODOMask, textureIm, patchL):
             #
             for patchRow in range(patch_rows):
                 for patchCol in range(patch_cols):
-
                     if TODOMask[patchRow][patchCol] == 0:
                         patchArr = TODOPatch[patchRow][patchCol]
                         textureArr = textureIm[r + patchRow][c + patchCol]
@@ -47,6 +52,31 @@ def ComputeSSD(TODOPatch, TODOMask, textureIm, patchL):
     return SSD
 
 def CopyPatch(imHole,TODOMask,textureIm,iPatchCenter,jPatchCenter,iMatchCenter,jMatchCenter,patchL):
+    '''
+    CopyPatch
+
+    Copies the patch into the destination image at the specified location.
+
+    imHole - The image we are copying the patch into.
+
+    TODOMask - Specifies the elements of which elements of TODOPatch are empty and
+                waiting to be filled in. A 1 represents an empty pixel.
+                The first two dimensions are the same as TODOPatch, and there is no 
+                third dimension.
+
+    textureIm - The texture image. Size is [texImRows, texImCols, 3]
+
+    iPatchCenter - The row index of the patch center in the destination image
+
+    jPatchCenter - The column index of the patch center in the destination image
+
+    iMatchCenter - The row index of the match center in the texture image.
+
+    jMatchCenter - The column index of the patch center in the texture image.
+
+    patchL - The length used to define the patch size.
+
+    '''
     patchSize = 2 * patchL + 1
     for i in range(patchSize):
         for j in range(patchSize):
@@ -57,29 +87,6 @@ def CopyPatch(imHole,TODOMask,textureIm,iPatchCenter,jPatchCenter,iMatchCenter,j
             # ADD YOUR CODE HERE
             #
             if TODOMask[i][j] == 1:
-                # print "imHole.shape"
-                # print imHole.shape
-                # print "TODOMask.shape"
-                # print TODOMask.shape
-                # print "textureIm.shape"
-                # print textureIm.shape
-                # print "iPatchCenter"
-                # print iPatchCenter
-                # print "jPatchCenter"
-                # print jPatchCenter
-                # print "iMatchCenter"
-                # print iMatchCenter
-                # print "jMatchCenter"
-                # print jMatchCenter
-                # print "patchL"
-                # print patchL
-
-                # print "iMatchCenter - patchL + i"
-                # print iMatchCenter - patchL + i
-
-                # print "jPatchCenter - patchL + j"
-                # print jPatchCenter - patchL + j
-
                 holeLoc = imHole[iPatchCenter - patchL + i][jPatchCenter - patchL + j];
                 textureLoc = textureIm[iMatchCenter - patchL + i][jMatchCenter - patchL + j];
                 holeLoc[0] = textureLoc[0];
@@ -161,7 +168,7 @@ showResults = True
 # Read input image
 #
 
-im = Image.open('camel-in-desert.jpg').convert('RGB')
+im = Image.open('metal.jpg').convert('RGB')
 im_array = np.asarray(im, dtype=np.uint8)
 imRows, imCols, imBands = np.shape(im_array)
 
