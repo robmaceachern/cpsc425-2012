@@ -1,4 +1,5 @@
 from PIL import Image, ImageDraw
+from pprint import pprint
 import numpy as np
 import csv
 import math
@@ -99,19 +100,36 @@ def match(image1,image2):
     #
     #Generate five random matches (for testing purposes)
 
-    print keypoints1
-    print descriptors1
-
+    angle_threshold = 0.82
     matched_pairs = []
-    num = 5
-    for i in range(num):
-        matched_pairs.append([keypoints1[i],keypoints2[i]])
-    #
-    # END OF SECTION OF CODE TO REPLACE
-    #
+
+    for i in range(len(descriptors1)):
+        
+        angles = []
+        for j in range(len(descriptors2)):
+            # We compare each descriptor in descriptors1 with 
+            # every descriptor in descriptors2, calculating the 
+            # angle between each pair
+            dot = np.dot(descriptors1[i], descriptors2[j])
+            angles.append(math.acos(dot))
+
+        # Sort the resulting angles and select the 
+        # two smallest
+        sortedAngles = sorted(angles)
+        best = sortedAngles[0]
+        second = sortedAngles[1]
+
+        # We calculate the ratio between the best and second best 
+        # angles, and only count it as a match if the ratio is less 
+        # than our threshold
+        if (best/second <= angle_threshold):
+            bestIndex = angles.index(best)
+            matched_pairs.append([keypoints1[i], keypoints2[bestIndex]])
+            #print 'meets threshold:', best, second
+
     im3 = DisplayMatches(im1, im2, matched_pairs)
     return im3
 
 #Test run...
-match('scene','basmati')
+match('scene','book')
 
