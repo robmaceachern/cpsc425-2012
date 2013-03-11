@@ -168,7 +168,7 @@ showResults = True
 # Read input image
 #
 
-im = Image.open('metal.jpg').convert('RGB')
+im = Image.open('donkey.jpg').convert('RGB')
 im_array = np.asarray(im, dtype=np.uint8)
 imRows, imCols, imBands = np.shape(im_array)
 
