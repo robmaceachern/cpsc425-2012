@@ -82,10 +82,22 @@ def DisplayMatches(im1, im2, matched_pairs):
     im3.show()
     return im3
 
+def absoluteAngleDifference(a, b):
+    '''
+    Returns the absolute difference (in degrees) between two angles (specified
+        in radians)
+
+    a - an angle specified in radians
+    b - an angle specified in radians
+    '''
+    aa = math.degrees(a) + 360
+    bb = math.degrees(b) + 360
+    return abs(aa - bb) % 180
+
 def match(image1,image2):
     """Input two images and their associated SIFT keypoints.
-    Display lines connecting the first 5 keypoints from each image.
-    Note: These 5 are not correct matches, just randomly chosen points.
+    Display lines connecting points that meet our experimental thresholds for 
+    SIFT and RANSAC.
 
     The arguments image1 and image2 are file names without file extensions.
 
@@ -100,7 +112,7 @@ def match(image1,image2):
     #
     #Generate five random matches (for testing purposes)
 
-    angle_threshold = 0.82
+    angle_threshold = 0.75
     matched_pairs = []
 
     for i in range(len(descriptors1)):
@@ -127,9 +139,47 @@ def match(image1,image2):
             matched_pairs.append([keypoints1[i], keypoints2[bestIndex]])
             #print 'meets threshold:', best, second
 
-    im3 = DisplayMatches(im1, im2, matched_pairs)
+    # maximum difference (in degrees) between change in orientation. Used in RANSAC
+    orientationLimit = 20
+    # maxiumum scale ratio. Used in RANSAC
+    scaleLimit = 0.9
+    largestSupport = []
+    for k in range(10):
+        randomMatch = matched_pairs[np.random.randint(len(matched_pairs))]
+        deltaScale1 = abs(randomMatch[0][2] - randomMatch[1][2])
+        deltaOrientation1 = randomMatch[0][3] - randomMatch[1][3]
+        currentSupport = []
+        for match in matched_pairs:
+            # check for consistency and add it to currentSupport if consistent
+            deltaOrientation2 = match[0][3] - match[1][3]
+            difference = absoluteAngleDifference(deltaOrientation1, deltaOrientation2)
+            if (difference > orientationLimit):
+                # Is not consistent, move on to next element
+                continue
+
+            # Check scale
+            deltaScale2 = abs(match[0][2] - match[1][2])
+            maxScale = max(deltaScale1, deltaScale2)
+            minScale = min(deltaScale1, deltaScale2)
+            if (maxScale * scaleLimit > minScale):
+                continue
+            # if we reach this point, it's consistent
+            # so add it to our support set
+            currentSupport.append(match)
+
+        # Update our largest support set, if necessary
+        if (len(currentSupport) > len(largestSupport)):
+            largestSupport = currentSupport
+
+    print "length of largest support set: ", len(largestSupport)
+
+    #im3 = DisplayMatches(im1, im2, matched_pairs)
+    im3 = DisplayMatches(im1, im2, largestSupport)
+    im3.save('result.png', 'PNG')
     return im3
 
 #Test run...
-match('scene','book')
+#match('scene','basmati')
+match('library', 'library2')
+
 
