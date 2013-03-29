@@ -66,11 +66,15 @@ def gauss2d(sigma):
     Returns a 2D Gaussian filter for a given sigma.
     '''
 
-    gauss = gauss1d(sigma)[np.newaxis]
-    gaussTranspose = gauss1d(sigma)[np.newaxis].transpose()
+    a = gauss1d(sigma)[np.newaxis]
+    g = signal.convolve2d(a, a.T)
+    return g
 
-    convolved = signal.convolve2d(gauss, gaussTranspose)
-    return convolved
+    # gauss = gauss1d(sigma)[np.newaxis]
+    # gaussTranspose = gauss1d(sigma)[np.newaxis].transpose()
+
+    # convolved = signal.convolve2d(gauss, gaussTranspose)
+    # return convolved
 
 def gaussconvolve2d(image_array, sigma):
 
@@ -91,7 +95,7 @@ def boxconvolve2d(image, n):
     '''
     Convolves an image with a boxfilter of size n
     '''
-    filtered_array = signal.convolve2d(image, boxfilter(n))
+    filtered_array = signal.convolve2d(image, boxfilter(n), 'same')
     return filtered_array
 
 def Estimate_Derivatives(im1, im2, sigma=1.5, n=3):
@@ -110,29 +114,30 @@ def Estimate_Derivatives(im1, im2, sigma=1.5, n=3):
     return Ix, Iy, It
 
 def Optical_Flow(im1, im2, x, y, window_size, sigma=1.5, n=3):
+
+    '''
+    Calculates the optical flow between two images at a given point
+    using the Lucas-Kanade method.
+
+    im1 - the source image
+    im2 - the destination image
+    x,y - the location of the point to track in the source image
+    window_size - the size of the window to track
+    sigma - the sigma value to use when estimating derivatives of source and destination images
+    n - the box filter size to use when estimating derivatives of source and destination images
+    '''
     assert((window_size % 2) == 1) , "Window size must be odd"
-    # UNCOMMENT THE NEXT LINE WHEN YOU HAVE COMPLETED Estimate_Derivatives
     Ix, Iy, It = Estimate_Derivatives(im1, im2, sigma, n)
     half = np.floor(window_size/2)
-    # select the three local windows of interest
-    # UNCOMMENT THE NEXT LINE WHEN YOU HAVE COMPLETED Estimate_Derivatives
-    # print Ix
+
     win_Ix = Ix[y-half-1:y+half, x-half-1:x+half].T
-    # print "window_size:", window_size
-    #
-    # PROVIDE THE REST OF THE IMPLEMENTATION HERE (BASED ON THE WIKIPEDIA ARTICLE)
-    #
     win_Iy = Iy[y-half-1:y+half, x-half-1:x+half].T
     win_It = -It[y-half-1:y+half, x-half-1:x+half].T
 
     A = np.vstack((win_Ix.flatten(), win_Iy.flatten())).T
     V = np.dot(np.linalg.pinv(A), win_It.flatten())
-    #################################
-    # change the return line to:
-    # return V[1], V[0]
-    # (when you have completed the implementation)
-    #################################
-    return V[1], V[0]  # skeleton program returns a hard-coded value
+
+    return V[1], V[0]
 
 def AppendImages(im1, im2):
     """Create a new image that appends two images side-by-side.
@@ -163,9 +168,9 @@ def DisplayFlow(im1, im2, x, y, uarr, varr):
     xinit = x+uarr[0]
     yinit = y+varr[0]
     for u,v,ind in zip(uarr[1:], varr[1:], range(1, len(uarr))):
-		draw.line((offset+xinit, yinit, offset+xinit+u, yinit+v),fill="red",width=2)
-		xinit += u
-		yinit += v
+        draw.line((offset+xinit, yinit, offset+xinit+u, yinit+v),fill="red",width=2)
+        xinit += u
+        yinit += v
     draw.line((x, y, offset+xinit, yinit), fill="yellow", width=2)
     im3.show()
     del draw
@@ -215,10 +220,10 @@ y=277
 ##############################################################################
 
 # window size (for estimation of optical flow)
-window_size=13
+window_size=23
 
 # sigma of the 2D Gaussian (used in the estimation of Ix and Iy)
-sigma=2.3
+sigma=2.25
 
 # size of the boxfilter (used in the estimation of It)
 n = 3
@@ -255,19 +260,24 @@ print 'frame 7 to 8'
 DisplayFlow(PIL_im1, PIL_im2, x, y, uarr, varr)
 HitContinue()
 
+print "tracked in frame", 7, ": (", x, ",", y, ")"
+
 prev_im = im2
 xcurr = x+dx
 ycurr = y+dy
 offset = PIL_im1.size[0]
 
+print "tracked in frame", 8, ": (", xcurr, ",", ycurr, ")"
+
 for i in range(8, 14):
    im_i = 'frame%0.2d.png'%(i+1)
-   print 'frame', i, 'to', (i+1)
+   #print 'frame', i, 'to', (i+1)
    PIL_im_i = Image.open('%s'%im_i)
    numpy_im_i = np.asarray(PIL_im_i)
    dx, dy = Optical_Flow(prev_im, numpy_im_i, xcurr, ycurr, window_size, sigma, n)
    xcurr += dx
    ycurr += dy
+   print "tracked in frame", i+1, ": (", xcurr, ",", ycurr, ")"
    prev_im = numpy_im_i
    uarr.append(dx)
    varr.append(dy)
